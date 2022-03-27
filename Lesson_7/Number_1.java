@@ -47,10 +47,10 @@ public int getWeight() {
     }
 
     public Transport() {
-        this.power = getPower();
-        this.maxSpeed = getMaxSpeed();
-        this.weight =  getWeight();
-        this.brand = getBrand();
+        this.power = power;
+        this.maxSpeed = maxSpeed;
+        this.weight =  weight;
+        this.brand = brand;
     }
 
 
@@ -76,8 +76,8 @@ abstract class GroundTransport extends Transport {
 
     public GroundTransport() {
         super();
-        this.consumption = getConsumption();
-        this.countWheel = getCountWheel();
+        this.consumption = consumption;
+        this.countWheel = countWheel;
     }
 
     void displayInfo() {
@@ -100,8 +100,8 @@ class Passenger extends GroundTransport {
 
     public Passenger() {
         super();
-        this.type = getType();
-        this.countPassengers = getCountPassengers();
+        this.type = type;
+        this.countPassengers = countPassengers;
     }
 
     void displayInfo() {
@@ -199,8 +199,8 @@ class AirTransport extends Transport {
 
     public AirTransport() {
         super();
-        this.minLength = getMinLength();
-        this.wingspan = getWingspan();
+        this.minLength = minLength;
+        this.wingspan = wingspan;
     }
 
     void displayInfo() {
@@ -225,8 +225,8 @@ class CivilAircraft extends AirTransport {
         super.brand = "Airbus A320";
         super.maxSpeed = 890;
         super.weight = 66000;
-        this.countPax = getCountPax();
-        this.businessClass = getBusinessClass();
+        this.countPax = countPax;
+        this.businessClass = businessClass;
     }
 
     String isBusinessClass () {
@@ -282,8 +282,9 @@ class WarPlane extends AirTransport {
         super.wingspan = 1.3;
         super.weight = 21820;
         super.minLength=800;
-        this.catapult = getCatapult();
-        this.countRocket = getCountRocket();
+        super.power=1050;
+        this.catapult = catapult;
+        this.countRocket = countRocket;
     }
 
     String isCatapult() {
